@@ -8,7 +8,7 @@ import clsx from "clsx";
 import ConfirmatioDialog, { UserAction } from "../components/Dialogs";
 import AddUser from "../components/AddUser";
 
-const Users = () => {
+const Vendors = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [open, setOpen] = useState(false);
   const [openAction, setOpenAction] = useState(false);
@@ -58,7 +58,7 @@ const Users = () => {
 
       <td>
         <button
-          // onClick={() => userStatusClick(user)}
+          // onClick={() => vendorstatusClick(user)}
           className={clsx(
             "w-fit px-4 py-1 rounded-full",
             user?.isActive ? "bg-blue-200" : "bg-yellow-100"
@@ -70,7 +70,7 @@ const Users = () => {
 
       <td className='p-2 flex gap-4 justify-end'>
         <Button
-          className='text-blue-600 hover:text-blue-500 font-semibold sm:px-0'
+          className='text-[#F7670C] hover:text-[#F7670C] font-semibold sm:px-0'
           label='Edit'
           type='button'
           onClick={() => editClick(user)}
@@ -90,9 +90,9 @@ const Users = () => {
     <>
       <div className='w-full md:px-1 px-0 mb-6'>
         <div className='flex items-center justify-between mb-8'>
-          <Title title='  Team Members' />
+          <Title title='  Vendors' />
           <Button
-            label='Add New User'
+            label='Add New vendor'
             icon={<IoMdAdd className='text-lg' />}
             className='flex flex-row-reverse gap-1 items-center bg-blue-600 text-white rounded-md 2xl:py-2.5'
             onClick={() => setOpen(true)}
@@ -104,7 +104,7 @@ const Users = () => {
             <table className='w-full mb-5'>
               <TableHeader />
               <tbody>
-                {summary.users?.map((user, index) => (
+                {summary.vendors?.map((user, index) => (
                   <TableRow key={index} user={user} />
                 ))}
               </tbody>
@@ -135,4 +135,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default Vendors;
