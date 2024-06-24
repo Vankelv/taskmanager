@@ -1097,7 +1097,7 @@ export const tasks = [
     updatedAt: "2024-02-07T09:53:24.079Z",
     __v: 2,
   },
-];z
+];
 
 export const user = {
   _id: "662f32ffd1303cc",
